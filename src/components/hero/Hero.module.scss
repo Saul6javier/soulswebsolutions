@@ -1,0 +1,102 @@
+.container {
+  background-color: var(--header);
+  color: var(--text-secondary-black);
+  padding: 10px 30px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 1rem 0;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%;
+
+      input {
+        padding: 12px;
+        width: 100%;
+        max-width: 1000px;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 5px;
+        border: none;
+        color: var(--text-primary-black);
+      }
+
+      input:focus {
+        border: 2px solid var(--buttons-hover);
+        outline: none;
+      }
+
+      button {
+        padding: 12px 24px;
+        width: 100%;
+        max-width: 200px;
+        background-color: var(--buttons);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: var(--buttons-hover);
+        }
+      }
+    }
+  }
+}
+.container_degrade {
+  width: auto;
+  background: linear-gradient(to bottom, var(--header), var(--background-light));
+  padding: 30px 20px;
+
+  &__content {
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1rem 0;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .container__content {
+    h1 {
+      font-size: 1.5rem; /* Ajusta el tamaño del texto para móviles */
+    }
+
+    h2 {
+      font-size: 1rem; /* Ajusta el tamaño del texto para móviles */
+    }
+
+    form {
+      input {
+        width: 100%; /* Input ocupa casi todo el ancho */
+        font-size: 0.8rem;
+      }
+
+      button {
+        width: 100%; /* Botón ocupa casi todo el ancho */
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

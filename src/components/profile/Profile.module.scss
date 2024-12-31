@@ -1,0 +1,115 @@
+.container {
+  background-image: url('../../../public/blurrygradienthaikei.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--text-secondary-black);
+  height: 100%;
+  padding: 10px 30px;
+
+  &__content {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 1rem 0;
+    height: 30rem;
+    align-items: center;
+    justify-content: center;
+
+    &__boxcenter {
+      width: 80%;
+      height: 50%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-left: 0;
+
+      p {
+        text-align: justify;
+        line-height: 1.6;
+      }
+
+      button {
+        background-color: #25D366;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 24px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+          background-color: #1eb958;
+          transform: scale(1.05);
+          box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
+
+  /* Media Queries para diseño responsivo */
+  /* Pantallas medianas (hasta 1200px) */
+  @media (max-width: 1200px) {
+    &__content {
+      height: auto;
+      gap: 1.5rem;
+
+      &__boxcenter {
+        width: 90%;
+        height: auto;
+        padding: 1.5rem;
+      }
+    }
+  }
+
+  /* Pantallas pequeñas (hasta 768px) */
+  @media (max-width: 768px) {
+    padding: 10px 15px;
+
+    &__content {
+      flex-direction: column;
+      gap: 1rem;
+
+      &__boxcenter {
+        width: 100%;
+        padding: 1rem;
+
+        button {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  /* Pantallas muy pequeñas (hasta 480px) */
+  @media (max-width: 480px) {
+    padding: 5px 10px;
+
+    &__content {
+      gap: 0.5rem;
+
+      &__boxcenter {
+        width: 100%;
+        padding: 0.8rem;
+
+        p {
+          font-size: 0.9rem;
+        }
+        h1 {
+          text-align: center;
+        }
+
+        button {
+          padding: 8px 16px;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

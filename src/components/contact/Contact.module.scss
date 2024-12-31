@@ -1,0 +1,103 @@
+.container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  width: 80%;
+  margin-bottom: 15rem;
+
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  
+  
+
+  &__content {
+    gap: 1rem;
+    width: 100%;
+
+    form {
+      gap: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+
+      input {
+        font-family: 'Inter', sans-serif;
+        color: var(--text-primary-black);
+        height: 2rem;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+      }
+      
+      .customTextarea {
+          color: var(--text-primary-black);
+          height: 10rem;
+          padding: 10px;
+          font-size: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          outline: none;
+          text-align: left;
+          padding-top: 5px;
+          padding-left: 10px;
+          line-height: 1.2;
+          overflow: auto;
+          white-space: pre-wrap;
+        }
+        
+      
+    }
+    
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      background-color: var(--background-light);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    
+      &:hover {
+        background-color: #56b181;
+      }
+    }
+  }
+}
+
+/* Media Queries para diseño responsivo */
+/* Pantallas medianas (hasta 1200px) */
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+  
+}
+
+/* Pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* Pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+}

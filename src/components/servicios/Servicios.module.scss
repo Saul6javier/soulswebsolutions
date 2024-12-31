@@ -1,0 +1,41 @@
+.container {
+  background-color: #f0f4f8;
+  padding: 2rem;
+  border-radius: 12px;
+
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 1.5rem;
+  }
+
+  .serviciosList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .servicio {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &Titulo {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    &Descripcion {
+      font-size: 1rem;
+      color: #666;
+    }
+  }
+}
