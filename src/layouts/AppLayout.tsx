@@ -1,25 +1,27 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/header/Header";
+import HamburgerMenu from "../components/hamburgermenu/Hambuergermenu";
 import Footer from "../components/footer/Footer";
 import { useEffect, useState } from "react";
 import styles from './AppLayout.module.scss';
 
 export default function AppLayout() {
-    const [isClosedSideBar, setIsClosedSideBar] = useState(true);
-    const [isSidebarVisible, setIsSidebarVisible] = useState(window.innerWidth > 700);
-    const [isHamburMenuVisible, setIsHamburMenuVisible] = useState(false);
+    const [isSidebarVisible, setIsSidebarVisible] = useState(window.innerWidth > 768);
+    const [isHamburgemenuVisible, setIsHamburgemenuVisible] = useState(window.innerWidth <= 768);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsSidebarVisible(window.innerWidth > 1150);
+            const isLargeScreen = window.innerWidth > 768;
+            setIsSidebarVisible(isLargeScreen);
+            setIsHamburgemenuVisible(!isLargeScreen);
         };
+
         window.addEventListener('resize', handleResize);
         handleResize();
         return () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-
 
     return (
         <div className={styles.applayout}>
@@ -28,11 +30,16 @@ export default function AppLayout() {
                     <Header />
                 </>
             )}
+            {isHamburgemenuVisible && (
+                <>
+                    <HamburgerMenu />
+                </>
+            )}
             <main className={styles.applayout__main}>
                 <Outlet />
             </main>
             <footer className={styles.applayout__footer}>
-                <Footer />     
+                {/*<Footer />*/}   
             </footer>
         </div>
     );

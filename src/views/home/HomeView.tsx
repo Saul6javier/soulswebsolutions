@@ -1,11 +1,11 @@
 import { useLocation } from "react-router-dom";
 import Cards from "../../components/cards/Cards";
 import Carousel from "../../components/carrusel/Carrusel";
-import Hero from "../../components/hero/Hero";
 import PreFooter from "../../components/prefooter/PreFooter";
 import Profile from "../../components/profile/Profile";
-import VideoBlog from "../../components/videoblog/VideoBlog";
 import { useEffect } from "react";
+import Collaborators from "../../components/collaborators/Collaborators";
+import Description from "../../components/description/Description";
 
 export default function HomeView() {
 
@@ -26,8 +26,14 @@ export default function HomeView() {
             <div>
             <Profile />
             </div>
+            <div>
+            <Collaborators />
+            </div>
             <div id="proyectos">
             <Cards />
+            </div>
+            <div>
+            <Description />
             </div>
             <div id="colaboradores">
             <Carousel />

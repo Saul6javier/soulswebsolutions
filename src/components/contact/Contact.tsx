@@ -36,7 +36,7 @@ export default function Contact() {
 
   return (
     <div className={styles.container}>
-      <img src={'../../../public/logo.jpg'} alt="" />
+      <img src={'/logo.jpg'} alt="" />
       <div className={styles.container__content}>
         <form ref={form} onSubmit={sendEmail}>
           <input type="text" name="name" placeholder="Nombre completo" required />

@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Header.module.scss';
 import { Link } from 'react-router-dom';
 
@@ -7,7 +6,7 @@ export default function Header(){
     <header className={styles.container}>
       <div className={styles.container__content}>
         <div className={styles.container__content__logo}>
-          <img src={'../../../public/logo.jpg'} alt="" />
+          <img src={'/logo.jpg'} alt="" />
         </div>
         <nav className={styles.container__content__navbar}>
           <ul>

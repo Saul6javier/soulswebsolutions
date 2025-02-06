@@ -1,5 +1,4 @@
 // VideoPlayer.js
-import React from 'react';
 import styles from './VideoBlog.module.scss';
 
 export default function VideoBlog ({ videoSrc, videoTitle }:any) {

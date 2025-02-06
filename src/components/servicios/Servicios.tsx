@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Servicios.module.scss';
 
 export default function Servicios() {

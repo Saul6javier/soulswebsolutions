@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './PreFooter.module.scss';
 import { Link } from 'react-router-dom';
  
@@ -55,7 +54,7 @@ export default function PreFooter() {
         <div className={styles.container__content__preFooterSection}>
           <h3>Redes Sociales</h3>
           <ul>
-            <li><a href="https://www.facebook.com/profile.php?id=61571089566319"><img src={'../../../public/icon/facebook.svg'} alt="" /></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61571089566319"><img src={'/icon/facebook.svg'} alt="" /></a></li>
           </ul>
         </div>
       </div>
